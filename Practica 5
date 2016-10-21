@@ -1,0 +1,72 @@
+{-- Práctica 5
+-- Estructuras Discretas
+-- 2017-1
+-- Profa: Laura Freidberg Gojman
+-- Ayudante: José Ricardo Rodríguez Abreu
+-- Ayudante de lab: Albert Manuel Orozco Camacho
+-- Version: 0.1
+--}
+
+module Practica5 where
+
+ import PicturesSVG
+
+-- Ajedrez
+
+ row :: Int -> Picture -> Picture
+ row _ _ = error "missing implementation!"
+ row 0 _ = error "missing implementation"
+ row 1 p = p
+ row n p = beside p (row n-1 p)
+
+ column :: Int -> Picture -> Picture
+ column _ _ = error "missing implementation!"
+
+ grid :: Int -> Int -> Picture
+ grid _ _ = error "missing implementation!"
+
+-- Geometría
+
+type Coord = (Double, Double)
+
+type LineSegment = (Coord, Coord)
+
+data Polygon = Triangle Coord Coord Coord
+             | Rectangle Coord Coord Coord Coord
+             | ConvexPolygon [LineSegment]
+             deriving (Show, Eq)
+
+isTriangle :: Polygon -> Bool
+isTriangle _ = error "missing implementation!"
+
+isRightTriangle :: Polygon -> Bool
+isRightTriangle = error "missing implementation!"
+
+makeTriangles :: [Coord] -> [Coord] -> [Coord] -> [Polygon]
+makeTriangles _ _ _ = error "missing implementation!"
+
+isSquare :: Polygon -> Bool
+isSquare _ = error "missing implementation!"
+
+pointSide :: LineSegment -> Coord -> Int
+pointSide _ _ = error "missing implementation!"
+
+inConvexHull :: Polygon -> Bool
+inConvexHull _ = error "missing implementation!"
+
+kNearest :: LineSegment -> [Coord] -> Int -> [Coord]
+kNearest _ _ _ = error "missing implementation!"
+
+-- Listas
+
+myTake :: Int -> [a] -> [a]
+myTake _ _ _ = error "missing implementation!"
+
+myCount :: Eq a => a -> [a] -> a
+myCount _ _ = error "missing implementation!"
+
+myFreq :: Eq a => [a] -> [(a, Int)]
+myFreq _ = error "missing implementation!"
+
+dumbCompress :: String -> String
+dumbCompress _ = error "missing implementation!"
