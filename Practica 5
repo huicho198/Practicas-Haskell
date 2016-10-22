@@ -37,7 +37,10 @@ data Polygon = Triangle Coord Coord Coord
              deriving (Show, Eq)
 
 isTriangle :: Polygon -> Bool
+--{metodo para saber si es triangulo}
 isTriangle _ = error "missing implementation!"
+isTriangle (Triangle a b c ) = not $ (m a b) = (m a c)
+m s t = ((snd s) (snd t))/((fst s)(fst t))
 
 isRightTriangle :: Polygon -> Bool
 isRightTriangle = error "missing implementation!"
@@ -46,6 +49,7 @@ makeTriangles :: [Coord] -> [Coord] -> [Coord] -> [Polygon]
 makeTriangles _ _ _ = error "missing implementation!"
 
 isSquare :: Polygon -> Bool
+--Metodo para saber si es un cuadrado
 isSquare _ = error "missing implementation!"
 
 pointSide :: LineSegment -> Coord -> Int
@@ -53,20 +57,22 @@ pointSide _ _ = error "missing implementation!"
 
 inConvexHull :: Polygon -> Bool
 inConvexHull _ = error "missing implementation!"
+--{saber si un punto esta dentro de una figura convexa}
 
 kNearest :: LineSegment -> [Coord] -> Int -> [Coord]
 kNearest _ _ _ = error "missing implementation!"
-
+--{Metodo para saber que puntos son menor o iguales a k(lineSegment) entre los puntos dados[coord]}
 -- Listas
 
 myTake :: Int -> [a] -> [a]
 myTake _ _ _ = error "missing implementation!"
-
+--{implementar la funcion take}
 myCount :: Eq a => a -> [a] -> a
 myCount _ _ = error "missing implementation!"
-
+--{saber si el elemento esta en la lista}
 myFreq :: Eq a => [a] -> [(a, Int)]
 myFreq _ = error "missing implementation!"
-
+--{Metodo para saber el numero de veces que parece el elemento "a"en una lista, y regresar el elemento y el numero de lista de forma (a,b)}
 dumbCompress :: String -> String
 dumbCompress _ = error "missing implementation!"
+--{metodo para separar una cadena en palabras, agarrando solo la primera letra y cada palabra separa por espacios}
